@@ -1,0 +1,21 @@
+@mixin container-box($width, $border, $outline, $fnt-size) {
+    width: $width;
+    border: $border;
+    outline: $outline;
+    font-size: $fnt-size;
+}
+
+@mixin button-style($border, $outline, $fnt-size, $background-color, $fnt-weight, $cursor) {
+    border: $border;
+    outline: $outline;
+    font-size: $fnt-size;
+    background-color: $background-color;
+    font-weight: $fnt-weight;
+    cursor: $cursor;
+}
+
+@mixin flex($display, $justify-content, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

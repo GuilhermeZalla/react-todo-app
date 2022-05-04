@@ -1,0 +1,17 @@
+/* Import Colors */
+
+@import './variables/colors/colors.scss';
+
+/* Import Fonts */
+
+@import './variables/fonts/fonts.scss';
+@import 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap';
+
+/* Import Common */
+
+@import './variables/common/common.scss';
+
+/* Import React Components */
+
+@import './components/display/display.scss';
+@import './components/display/display-tasks/display-tasks.scss';

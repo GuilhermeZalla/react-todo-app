@@ -1,0 +1,157 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fnt-family;
+    font-size: $fnt-body-size;
+    background-color: $clr-light-main-bg;
+}
+
+.display {
+    height: 100vh;
+    .check-icon {
+        color: white;
+        font-size: .80em;
+    }
+}
+
+.header {
+    padding: 20% 10% 10% 10%;
+    background-image: url('/src/images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .header__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+        &>.header__item {
+            font-size: 1.6em;
+            font-weight: $fnt-weight-secondary;
+            color: $clr-light-tasks-bg;
+            letter-spacing: .3cm;
+        }
+        .header__button {
+            @include button-style(none,
+            none,
+            auto,
+            transparent,
+            auto,
+            pointer);
+        }
+    }
+    .input__container {
+        display: flex;
+        background-color: $clr-light-tasks-bg;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 15px 15px;
+        box-shadow: 0px 0px 6px 0px #636666d1;
+        &>.input__button {
+            background-color: inherit;
+            border-radius: 50%;
+            border: 1px solid $clr-light-active-states;
+            outline: none;
+            margin-right: 10px;
+            padding: 1px 4px 2px 4px;
+            &>.is-active {
+                visibility: hidden;
+            }
+            &.is-checked {
+                background-image: linear-gradient(to bottom right, $clr-linear-primary, $clr-linear-secondary);
+            }
+        }
+        &>input {
+            @include container-box(100%,
+            none,
+            none,
+            .75em);
+            background-color: transparent;
+            font-family: $fnt-family;
+        }
+    }
+}
+
+.container {
+    padding: 0 10% 10% 10%;
+    margin-top: -20px;
+    background-color: transparent;
+    border-radius: 5px;
+    .container__tasks {
+        box-shadow: 0px 0px 6px 0px #63666630;
+        background-color: $clr-light-tasks-bg;
+        border-radius: 5px;
+    }
+    .container__footer {
+        @include flex(flex,
+        space-between,
+        center);
+        padding: 15px;
+        border-radius: 5px;
+        color: $clr-light-active-states;
+    }
+    .container__count {
+        font-size: .70em;
+    }
+    .container__button {
+        @include button-style(none,
+        none,
+        .70em,
+        transparent,
+        $fnt-weight-primary,
+        pointer);
+        font-family: $fnt-family;
+        color: $clr-light-active-states;
+        &:hover {
+            color: $clr-light-delete-btn;
+        }
+    }
+    .footer {
+        margin-top: 1em;
+        .footer__list {
+            @include flex(flex,
+            center,
+            center);
+            border-radius: 5px;
+            padding: 10px 15px;
+            background-color: $clr-light-tasks-bg;
+            border-top: 1px solid $clr-light-noactive-states;
+            box-shadow: 0px 0px 6px 0px #63666630;
+        }
+        .footer__button {
+            border: none;
+            outline: none;
+            color: $clr-light-active-states;
+            cursor: pointer;
+            font-family: $fnt-family;
+            background-color: transparent;
+            font-weight: 500;
+            &:hover {
+                color: $clr-active-states;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+    .header {
+        padding: 5% 15%;
+    }
+    .container {
+        padding: 0 15%;
+        margin-top: -3%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .header {
+        padding: 5% 30%;
+    }
+    .container {
+        padding: 0 30%;
+        margin-top: -3%;
+    }
+}

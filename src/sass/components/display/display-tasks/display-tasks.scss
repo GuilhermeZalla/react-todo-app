@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.container__item {
+    border-radius: 5px;
+    .container__input {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid $clr-light-noactive-states;
+        &>.input__button {
+            @include button-style(1px solid $clr-light-active-states, none, auto, inherit, auto, pointer);
+            border-radius: 50%;
+            margin-right: 10px;
+            padding: 1px 4px 2px 4px;
+            &>.is-active {
+                visibility: hidden;
+            }
+            &.is-checked {
+                background-image: $clr-check-bg;
+            }
+            &:hover {
+                border: 1px solid $clr-linear-secondary;
+            }
+        }
+        &>label {
+            @include container-box(100%, none, none, .75em);
+            font-weight: $fnt-weight-primary;
+            padding: 5px;
+            cursor: pointer;
+            &>.is-deleted {
+                color: $clr-light-active-states;
+            }
+        }
+        &>:last-child.input__button {
+            padding-top: 5px;
+            visibility: hidden;
+            @include button-style(none, none, 1em, transparent, auto, pointer);
+            &>svg {
+                fill: $clr-light-active-states;
+                &:hover {
+                    fill: $clr-light-delete-btn;
+                }
+            }
+        }
+        &:hover {
+            &>:last-child.input__button {
+                visibility: visible;
+            }
+        }
+    }
+}

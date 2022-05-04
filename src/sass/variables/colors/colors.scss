@@ -1,0 +1,22 @@
+$clr-active-states: hsl(220, 98%, 61%);
+$clr-linear-primary: hsl(192, 100%, 67%);
+$clr-linear-secondary: hsl(280, 87%, 65%);
+$clr-check-bg: linear-gradient(to bottom right, $clr-linear-primary, $clr-linear-secondary);
+
+/* Light Mode */
+
+$clr-light-tasks-bg: hsl(0, 0%, 98%);
+$clr-light-main-bg: hsl(236, 33%, 92%);
+$clr-light-noactive-states: hsl(233, 11%, 84%);
+$clr-light-active-states: hsl(236, 9%, 61%);
+$clr-light-delete-btn: hsl(235, 19%, 35%);
+
+/* Dark Mode */
+
+$clr-dark-tasks-bg: hsl(235, 21%, 11%);
+$clr-dark-main-bg: hsl(235, 24%, 19%);
+$clr-dark-noactive-states: hsl(234, 39%, 85%);
+$clr-dark-noactive-states-hover: hsl(236, 33%, 92%);
+$clr-dark-active-states: hsl(234, 11%, 52%);
+$clr-dark-delete-btn: hsl(233, 14%, 35%);
+$clr-dark-delete-btn-darker: hsl(237, 14%, 26%);
